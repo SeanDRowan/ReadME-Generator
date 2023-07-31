@@ -1,7 +1,6 @@
-# Title
-     1
+# 2
 ## Description
-    2
+    3
 ## Table of Contents
 [Installation](#installation)
 
@@ -9,21 +8,24 @@
 
 [License](#License)
 
-[Contributing](#Contrbuting)
+[Contributing](#Contributing)
 
 [testing](#tests)
 
 [Questions](#Questions)
 ### Istallation
-     3
-### Usage
      4
-### License
+### Usage
      5
+### License
+     
 ### Contributing
      6
 ### tests
      7
 ### Questions
-     8
+for additional questions, please reach out to me on github
+[SeanDRowan](https://github.com/SeanDRowan)
+    or by email at
+<sdrowan93@gmail.com>
      

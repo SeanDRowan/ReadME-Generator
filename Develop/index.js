@@ -2,8 +2,8 @@
 const inquirer = require ('inquirer')
 const fs = require ('fs')
 // TODO: Create an array of questions for user input
-const questions = ['What is your projec Title?', 'Give a short project Description', 'Table of Contents', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'Questions'];
-const [title, description, table, installation, usage, license, contributing, tests, question] = questions
+const questions = ['What is your project Title?', 'Give a short project Description', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'what is your github username?','what is your email?'];
+const [title, description, installation, usage, license, contributing, tests, github, email] = questions
 
 
 // TODO: Create a function to write README file
@@ -11,48 +11,53 @@ function writeToFile(fileName, data) {
     inquirer.prompt([
       {
         type: 'input',
-        message: title.questions,
+        message: title,
         name: 'title',
       },
      {
           type: 'input',
-          message: description.questions,
+          message: description,
           name: 'description',
         },
         {
           type: 'input',
-          message: installation.questions,
+          message: installation,
           name: 'installation',
         },
         {
           type: 'input',
-          message: usage.questions,
+          message: usage,
           name: 'usage',
         },
         {
-            type: 'input',
-            message: license.questions,
-            name: 'license',
+          type: 'checkbox', 
+          name: 'license',
+          choices: ["MIT", "GPLv3", "GPL"],
+          message: license,
           },
           {
             type: 'input',
-            message: contributing.questions,
+            message: contributing,
             name: 'contribute',
           },
           {
             type: 'input',
-            message: tests.questions,
+            message: tests,
             name: 'tests',
           },
           {
             type: 'input',
-            message: question.questions,
-            name: 'question',
+            message: github,
+            name: 'github',
+          },
+          {
+            type: 'input',
+            message: email,
+            name: 'email',
           },
     ])
     .then((response) =>  {
-    fs.writeFile('README1.md',`# Title
-     ${response.title}
+    fs.writeFile('README1.md',`# ${response.title}
 ## Description
     ${response.description}
 ## Table of Contents
@@ -62,7 +67,7 @@ function writeToFile(fileName, data) {
 
 [License](#License)
 
-[Contributing](#Contrbuting)
+[Contributing](#Contributing)
 
 [testing](#tests)
 
@@ -78,7 +83,10 @@ function writeToFile(fileName, data) {
 ### tests
      ${response.tests}
 ### Questions
-     ${response.question}
+for additional questions, please reach out to me on github
+[${response.github}](https://github.com/${response.github})
+    or by email at
+<${response.email}>
      `, (err) =>
     err ? console.error(err) : console.log('Commit logged!'))
     });}
