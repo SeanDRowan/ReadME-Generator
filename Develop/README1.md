@@ -1,6 +1,7 @@
-# 2
+ # 1
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-    3
+    2
 ## Table of Contents
 [Installation](#installation)
 
@@ -14,9 +15,9 @@
 
 [Questions](#Questions)
 ### Istallation
-     4
+     3
 ### Usage
-     5
+     4
 ### License
      
 ### Contributing
@@ -25,7 +26,7 @@
      7
 ### Questions
 for additional questions, please reach out to me on github
-[SeanDRowan](https://github.com/SeanDRowan)
+[8](https://github.com/8)
     or by email at
-<sdrowan93@gmail.com>
+<9>
      

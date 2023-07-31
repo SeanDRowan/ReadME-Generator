@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer')
 const fs = require ('fs')
+const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = ['What is your project Title?', 'Give a short project Description', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'what is your github username?','what is your email?'];
 const [title, description, installation, usage, license, contributing, tests, github, email] = questions
@@ -57,44 +58,13 @@ function writeToFile(fileName, data) {
           },
     ])
     .then((response) =>  {
-    fs.writeFile('README1.md',`# ${response.title}
-## Description
-    ${response.description}
-## Table of Contents
-[Installation](#installation)
-
-[Usage](#usage)
-
-[License](#License)
-
-[Contributing](#Contributing)
-
-[testing](#tests)
-
-[Questions](#Questions)
-### Istallation
-     ${response.installation}
-### Usage
-     ${response.usage}
-### License
-     ${response.license}
-### Contributing
-     ${response.contribute}
-### tests
-     ${response.tests}
-### Questions
-for additional questions, please reach out to me on github
-[${response.github}](https://github.com/${response.github})
-    or by email at
-<${response.email}>
-     `, (err) =>
+    fs.writeFile('README1.md',` ${generateMarkdown(response)}`, (err) =>
     err ? console.error(err) : console.log('Commit logged!'))
     });}
 // TODO: Create a function to initialize app
 function init() {
-
+writeToFile()
 }
 
 // Function call to initialize app
 init();
-writeToFile()
