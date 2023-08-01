@@ -3,7 +3,7 @@ const inquirer = require ('inquirer')
 const fs = require ('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
-const questions = ['What is your project Title?', 'Give a short project Description', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'what is your github username?','what is your email?'];
+const questions = ['What is your project Title?', 'Give a short project Description', 'Installation instructions', 'Usage instructions and examples', 'License', 'How can others contribute?', 'Tests', 'what is your github username?','what is your email?'];
 const [title, description, installation, usage, license, contributing, tests, github, email] = questions
 
 
@@ -33,7 +33,7 @@ function writeToFile(fileName, data) {
         {
           type: 'checkbox', 
           name: 'license',
-          choices: ["MIT", "GPLv3", "GPL"],
+          choices: ["MIT", "GPLv3", "Mozilla Public License 2.0"],
           message: license,
           },
           {
@@ -58,7 +58,7 @@ function writeToFile(fileName, data) {
           },
     ])
     .then((response) =>  {
-    fs.writeFile('README1.md',` ${generateMarkdown(response)}`, (err) =>
+    fs.writeFile(`${response.title}.md`,` ${generateMarkdown(response)}`, (err) =>
     err ? console.error(err) : console.log('Commit logged!'))
     });}
 // TODO: Create a function to initialize app

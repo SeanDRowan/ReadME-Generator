@@ -1,32 +1,33 @@
- # 1
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+ # README1
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ## Description
-    2
+    
 ## Table of Contents
 [Installation](#installation)
 
 [Usage](#usage)
 
-[License](#License)
+[License](#license)
 
-[Contributing](#Contributing)
+[Contributing](#contributing)
 
 [testing](#tests)
 
-[Questions](#Questions)
-### Istallation
-     3
-### Usage
-     4
-### License
+[Questions](#questions)
+### Installation
      
+### Usage
+     
+
+### License 
+This project is using the Mozilla Public License 2.0 license, for more information about this license follow the link here. [Mozilla 2.0 license Link](https://spdx.org/licenses/MPL-2.0.html)
 ### Contributing
-     6
-### tests
-     7
+     
+### Tests
+     
 ### Questions
 for additional questions, please reach out to me on github
-[8](https://github.com/8)
+[](https://github.com/)
     or by email at
-<9>
+<>
      
