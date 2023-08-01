@@ -13,7 +13,7 @@ if(licenseKey === 'MIT') {
   yourLicense = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
 } else {
   yourLicense = ''
-}console.log(yourLicense)
+}
 return yourLicense;
 }
 
@@ -21,17 +21,16 @@ return yourLicense;
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 let licenseKey = license.toString()
-// console log to find out what lisence keys value is if nothing is selceted, then put it in render licsense section.
 let yourLicense = ''
 if(licenseKey === 'MIT') {
   yourLicense = `[MIT License Link](https://mit-license.org/)`
 } else if (licenseKey === 'GPLv3') {
-  yourLicense = `[GPLv3 license Link](https://www.gnu.org/licenses/gpl-3.0.en.html#Preamble)`
+  yourLicense = `[GPLv3 license Link](https://www.gnu.org/licenses/gpl-3.0.en.html#license-text)`
 } else if (licenseKey === 'Mozilla Public License 2.0') {
   yourLicense = `[Mozilla 2.0 license Link](https://spdx.org/licenses/MPL-2.0.html)`
 } else {
   yourLicense = ''
-}console.log(yourLicense)
+}
 return yourLicense;
 }
 
@@ -44,7 +43,6 @@ function renderLicenseSection(license) {
     licenseSection = `### License 
 This project is using the ${licenseKey} license, for more information about this license follow the link here. ${renderLicenseLink(license)}`
   }
-  console.log(licenseSection)
   return licenseSection;
 }
 

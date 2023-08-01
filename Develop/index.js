@@ -8,8 +8,13 @@ const [title, description, installation, usage, license, contributing, tests, gi
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    inquirer.prompt([
+function writeToFile(response) {
+    fs.writeFile(`${response.title}.md`,` ${generateMarkdown(response)}`, (err) =>
+    err ? console.error(err) : console.log('README created!'))
+    ;}
+// TODO: Create a function to initialize app
+function init() {
+   inquirer.prompt([
       {
         type: 'input',
         message: title,
@@ -57,13 +62,7 @@ function writeToFile(fileName, data) {
             name: 'email',
           },
     ])
-    .then((response) =>  {
-    fs.writeFile(`${response.title}.md`,` ${generateMarkdown(response)}`, (err) =>
-    err ? console.error(err) : console.log('Commit logged!'))
-    });}
-// TODO: Create a function to initialize app
-function init() {
-writeToFile()
+    .then((response) =>  {writeToFile(response)})
 }
 
 // Function call to initialize app
